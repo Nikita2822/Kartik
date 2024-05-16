@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squares and Cubes Table</title>
+</head>
+<body>
+  <h2>Squares and Cubes Table</h2>
+  <div id="table-container"></div>
+
+  <script>
+    // Function to calculate squares and cubes
+    function calculateSquaresAndCubes() {
+      var tableHtml = "<table border='1'><tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+      for (var i = 0; i <= 10; i++) {
+        var square = i * i;
+        var cube = i * i * i;
+        tableHtml += "<tr><td>" + i + "</td><td>" + square + "</td><td>" + cube + "</td></tr>";
+      }
+      tableHtml += "</table>";
+      document.getElementById("table-container").innerHTML = tableHtml;
+    }
+
+    // Call the function to generate the table
+    calculateSquaresAndCubes();
+  </script>
+</body>
+</html>
